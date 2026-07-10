@@ -178,7 +178,7 @@ export const blogPosts: BlogPost[] = [
     authorRole: "Strategic Talent Advisor (BFSI)",
     date: "2026-07-05",
     readTime: "6 min read",
-    tags: ["BFSI", "Contract Staffing", "HR Advisory"],
+    tags: ["BFSI", "Contract Staffing", "Recruitment"],
     themeClass: "from-sky-600 to-slate-805"
   },
   {
@@ -247,10 +247,10 @@ export const blogPosts: BlogPost[] = [
       <p>Support mental health and respect work-life balance. Highly secure, stress-free environments produce superior code and foster long-term loyalty among technology teams.</p>
     `,
     author: "Deepa Nair",
-    authorRole: "VP of HR Advisory & Consultation",
+    authorRole: "VP of Human Resources & Recruitment",
     date: "2026-07-06",
     readTime: "5 min read",
-    tags: ["Employee Retention", "HR Advisory", "BFSI"],
+    tags: ["Employee Retention", "Recruitment", "BFSI"],
     themeClass: "from-fuchsia-600 to-indigo-955"
   }
 ];

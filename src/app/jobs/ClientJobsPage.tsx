@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { Search, MapPin, Briefcase, IndianRupee, Clock, ArrowRight, Filter } from "lucide-react";
 import { mockJobs, Job } from "@/lib/data/jobs";
 import JobApplicationModal from "@/components/JobApplicationModal";
@@ -13,6 +13,32 @@ export default function ClientJobsPage() {
   const [selectedLoc, setSelectedLoc] = useState<string>("All");
   const [activeJob, setActiveJob] = useState<Job | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+
+  // Synchronize search filters with URL parameters (search/id queries)
+  useEffect(() => {
+    const handleUrlParams = () => {
+      const params = new URLSearchParams(window.location.search);
+      const searchVal = params.get("search");
+      const idVal = params.get("id");
+      
+      if (searchVal) {
+        setSearchTerm(searchVal);
+      } else if (idVal) {
+        const matched = mockJobs.find((j) => j.id === idVal);
+        if (matched) {
+          setSearchTerm(matched.title);
+          // Clear filters to ensure the job is visible
+          setSelectedDept("All");
+          setSelectedLoc("All");
+        }
+      }
+    };
+
+    handleUrlParams();
+    
+    window.addEventListener("popstate", handleUrlParams);
+    return () => window.removeEventListener("popstate", handleUrlParams);
+  }, []);
 
   // Departments list for filter
   const departments = useMemo(() => {

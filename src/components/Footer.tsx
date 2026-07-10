@@ -51,7 +51,7 @@ export default function Footer() {
                   DSS <span className="text-gold-500 font-extrabold">Talent Bridge</span>
                 </span>
                 <span className="text-[9px] font-semibold uppercase tracking-widest text-slate-400">
-                  HR Advisory & Staffing
+                  Recruitment & Staffing
                 </span>
               </div>
             </Link>
@@ -78,28 +78,33 @@ export default function Footer() {
             </h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
                   Permanent Hiring
                 </Link>
               </li>
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
                   Contract Staffing
                 </Link>
               </li>
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
                   Leadership Hiring
                 </Link>
               </li>
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
                   Project-Based Recruitment
                 </Link>
               </li>
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
-                  Customized Talent Solutions
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
+                  Customized Talent Acquisition Solutions
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
+                  Recruitment Process Outsourcing (RPO)
                 </Link>
               </li>
             </ul>
@@ -122,8 +127,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hire" className="hover:text-gold-500 transition-colors">
-                  Hiring Portal (Companies)
+                <Link href="/contact" className="hover:text-gold-500 transition-colors">
+                  Hiring Inquiries (Companies)
                 </Link>
               </li>
               <li>
@@ -148,19 +153,13 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold-500 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-white block">Bangalore Office:</span>
-                  <span className="text-slate-400 text-xs">
-                    Outer Ring Road, Tech Corridor, Bangalore, KA, India
-                  </span>
+                  <span className="font-semibold text-white block">Bangalore Office</span>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="h-5 w-5 text-gold-500 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-semibold text-white block">Nagpur Office:</span>
-                  <span className="text-slate-400 text-xs">
-                    IT Park, Gayatri Nagar, Nagpur, MH, India
-                  </span>
+                  <span className="font-semibold text-white block">Nagpur Office</span>
                 </div>
               </li>
               <li className="flex items-center gap-3">

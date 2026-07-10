@@ -30,7 +30,7 @@ export default function PrivacyPage() {
               </p>
               
               <p>
-                At DSS Talent Bridge, we are committed to protecting the privacy and security of our candidates, clients, and website visitors. This Privacy Policy describes how we collect, use, store, and share your personal information when you use our HR Advisory and Staffing services or visit our website.
+                At DSS Talent Bridge, we are committed to protecting the privacy and security of our candidates, clients, and website visitors. This Privacy Policy describes how we collect, use, store, and share your personal information when you use our Human Resource Recruitment and Staffing services or visit our website.
               </p>
 
               <h2 className="text-lg font-bold text-navy-800 mt-8 mb-2">1. Information We Collect</h2>

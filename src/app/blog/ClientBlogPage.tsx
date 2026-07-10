@@ -44,7 +44,7 @@ export default function ClientBlogPage() {
           containerClassName="mt-3"
           textClassName="text-4xl font-extrabold text-navy-800 tracking-tight sm:text-5xl leading-tight"
         >
-          Sourcing & HR Advisory Blog
+          Sourcing & Recruitment Blog
         </ScrollFloat>
         <div className="mt-4 text-lg text-slate-600 min-h-[56px] sm:min-h-[48px]">
           <TextType

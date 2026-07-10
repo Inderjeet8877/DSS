@@ -5,7 +5,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://dsstalentbridge.com";
 
   // Static routes
-  const routes = ["", "/about", "/jobs", "/hire", "/contact", "/privacy", "/terms", "/blog"].map((route) => ({
+  const routes = ["", "/about", "/jobs", "/contact", "/privacy", "/terms", "/blog"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: "daily" as const,

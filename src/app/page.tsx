@@ -5,8 +5,8 @@ import Footer from "@/components/Footer";
 
 // Premium SEO Metadata
 export const metadata: Metadata = {
-  title: "DSS Talent Bridge | Premium Technology & BFSI Recruitment Advisory",
-  description: "DSS Talent Bridge connects exceptional talent with forward-thinking organizations in Bangalore, Nagpur, and globally. Over 7 years of expertise in AI, Cloud, BFSI, ERP, and Software Engineering.",
+  title: "DSS Talent Bridge | Technology & BFSI Recruitment & Staffing",
+  description: "DSS Talent Bridge is a technology-driven Human Resource Recruitment and Staffing firm connecting exceptional talent with forward-thinking organizations. Founded by recruitment professionals with over 7 years of experience.",
   keywords: [
     "Recruitment Firm",
     "Staffing Agency Bangalore",
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     "BFSI Staffing Services",
     "Cloud Computing Recruitment",
     "ERP SAP Staffing",
-    "Human Resource Advisory"
+    "Human Resource Recruitment"
   ],
   openGraph: {
-    title: "DSS Talent Bridge | HR Advisory & Staffing",
+    title: "DSS Talent Bridge | Recruitment & Staffing",
     description: "Bridging the Gap Between Exceptional Talent and Exceptional Companies.",
     url: "https://dsstalentbridge.com",
     siteName: "DSS Talent Bridge",

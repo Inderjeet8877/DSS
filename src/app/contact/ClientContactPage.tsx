@@ -103,13 +103,13 @@ export default function ClientContactPage() {
           containerClassName="mt-3"
           textClassName="text-4xl font-extrabold text-navy-800 tracking-tight sm:text-5xl leading-tight"
         >
-          Contact Our Advisory Team
+          Contact Our Recruitment Team
         </ScrollFloat>
         <div className="mt-4 text-lg text-slate-600 min-h-[56px] sm:min-h-[48px]">
           <TextType
             text={[
               "Reach out for collaborations, staffing agreements, and placements.",
-              "Our recruitment advisors respond within 24 business hours.",
+              "Our recruitment experts respond within 24 business hours.",
               "Connect with our operational hubs in Bangalore & Nagpur."
             ]}
             typingSpeed={50}
@@ -137,9 +137,6 @@ export default function ClientContactPage() {
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-gold-600 block">Silicon Valley Corridor</span>
               </div>
             </div>
-            <p className="text-xs text-slate-500 leading-relaxed pl-13">
-              Outer Ring Road, Tech Corridor, Bangalore, KA, India
-            </p>
           </div>
 
           {/* Nagpur Hub */}
@@ -153,9 +150,6 @@ export default function ClientContactPage() {
                 <span className="text-[10px] font-semibold uppercase tracking-wider text-gold-600 block">Sourcing & Digital Hub</span>
               </div>
             </div>
-            <p className="text-xs text-slate-500 leading-relaxed pl-13">
-              IT Park, Gayatri Nagar, Nagpur, MH, India
-            </p>
           </div>
 
           {/* Communications */}

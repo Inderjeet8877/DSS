@@ -6,7 +6,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
   title: "Terms & Conditions | DSS Talent Bridge",
-  description: "Read our Terms and Conditions governing candidate placements, advisory services, and employer staffing agreements.",
+  description: "Read our Terms and Conditions governing candidate placements, recruitment, and employer staffing agreements.",
 };
 
 export default function TermsPage() {
@@ -35,7 +35,7 @@ export default function TermsPage() {
 
               <h2 className="text-lg font-bold text-navy-800 mt-8 mb-2">1. Use of Services</h2>
               <p>
-                DSS Talent Bridge provides HR advisory, permanent staffing, contract hiring, and executive search services. You agree to use this website solely for lawful purposes, such as searching for open job opportunities or submitting staffing requisites.
+                DSS Talent Bridge provides Human Resource recruitment, permanent staffing, contract hiring, and executive search services. You agree to use this website solely for lawful purposes, such as searching for open job opportunities or submitting staffing requisites.
               </p>
 
               <h2 className="text-lg font-bold text-navy-800 mt-8 mb-2">2. Candidate Submissions</h2>

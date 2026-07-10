@@ -108,15 +108,15 @@ export const mockJobs: Job[] = [
 export const faqData = [
   {
     question: "What industries does DSS Talent Bridge specialize in?",
-    answer: "DSS Talent Bridge specializes in Technology, BFSI (Banking, Financial Services, and Insurance), AI & Machine Learning, Cloud Computing, ERP & SAP, Data Science, Software Engineering, Cybersecurity, and Digital Transformation."
+    answer: "Our expertise spans Technology, BFSI, AI & Machine Learning, Cloud Computing, ERP & SAP, Data Science, Software Engineering, Cybersecurity, and Digital Transformation."
   },
   {
     question: "Where are the office locations of DSS Talent Bridge?",
-    answer: "Our primary physical operational hubs are in Bangalore and Nagpur, India, enabling us to serve local enterprises and tap into regional tech hubs while catering to global talent demands."
+    answer: "Our operational hubs are in Bangalore and Nagpur, enabling us to serve local markets while catering to global talent demands."
   },
   {
     question: "What hiring models do you offer?",
-    answer: "We support multiple hiring structures tailored to your operational needs: Permanent Hiring, Contract Staffing, Leadership Hiring, Project-Based Recruitment, and Customized Talent Acquisition Solutions."
+    answer: "We support organizations with Permanent Hiring, Contract Staffing, Leadership Hiring, Project-Based Recruitment, and Customized Talent Acquisition Solutions."
   },
   {
     question: "How can candidates apply for open roles?",

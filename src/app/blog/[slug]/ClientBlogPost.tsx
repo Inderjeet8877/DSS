@@ -136,7 +136,7 @@ export default function ClientBlogPost({ post }: ClientBlogPostProps) {
               </div>
             </div>
             <p className="text-xs text-slate-500 leading-relaxed">
-              Provides strategic human resource insights and staffing advisory for cloud computing, ERP, AI integrations, and BFSI operations across India.
+              Provides strategic human resource insights and recruitment solutions for cloud computing, ERP, AI integrations, and BFSI operations across India.
             </p>
           </div>
 
@@ -168,11 +168,11 @@ export default function ClientBlogPost({ post }: ClientBlogPostProps) {
             </p>
             <div className="grid grid-cols-1 gap-2 pt-2">
               <Link
-                href="/hire"
+                href="/contact"
                 className="flex items-center justify-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-xs font-bold text-navy-800 shadow hover:bg-gold-400 transition-colors"
               >
                 <Building className="h-4 w-4" />
-                Submit Job Requirement
+                Contact Our Sourcing Team
               </Link>
               <Link
                 href="/jobs"

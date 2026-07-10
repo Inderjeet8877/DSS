@@ -5,9 +5,9 @@ import Footer from "@/components/Footer";
 import Breadcrumbs from "@/components/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Recruitment Insights & HR Advisory Blog | DSS Talent Bridge",
+  title: "Recruitment Insights & Staffing Blog | DSS Talent Bridge",
   description: "Stay updated with specialized staffing trends, interview guides, and industry analyses in AI, Cloud, SAP, BFSI, and regional developer hiring across Bangalore and Nagpur.",
-  keywords: ["Staffing Insights", "HR Advisory Blog", "Tech Recruitment Trends", "Hiring Developers Bangalore", "Nagpur Software Market", "BFSI Placements"],
+  keywords: ["Staffing Insights", "Recruitment Blog", "Tech Recruitment Trends", "Hiring Developers Bangalore", "Nagpur Software Market", "BFSI Placements"],
 };
 
 export default function BlogHubPage() {

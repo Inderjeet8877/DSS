@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Contact Us | DSS Talent Bridge Staffing & HR Advisory",
+  title: "Contact Us | DSS Talent Bridge Recruitment & Staffing",
   description: "Get in touch with recruitment experts at DSS Talent Bridge. Reach out for corporate collaborations, job seeker support, and technical inquiries in Bangalore and Nagpur.",
   keywords: ["Contact DSS Talent Bridge", "Recruitment Agency Phone", "Staffing Email", "Bangalore HR Contact", "Nagpur Office Details", "Collaborations"],
 };
