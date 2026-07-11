@@ -23,12 +23,12 @@ export default function TermsPage() {
             <h1 className="text-3xl font-extrabold text-navy-800 tracking-tight sm:text-4xl mt-3 mb-8">
               Terms & Conditions
             </h1>
-            
+
             <div className="prose prose-slate max-w-none text-slate-600 space-y-6 text-sm sm:text-base leading-relaxed">
               <p>
                 <strong>Last Updated: July 6, 2026</strong>
               </p>
-              
+
               <p>
                 Welcome to DSS Talent Bridge. These Terms and Conditions govern your access to and use of our website, recruiting portals, and general staffing services. By using our site, you agree to comply with these terms.
               </p>
@@ -63,7 +63,7 @@ export default function TermsPage() {
                 For questions regarding these Terms & Conditions, please contact us at:
               </p>
               <ul className="list-none pl-0 space-y-1">
-                <li><strong>Email:</strong> <a href="mailto:info@dsstalentbridge.com" className="text-gold-600 font-semibold hover:underline">info@dsstalentbridge.com</a></li>
+                <li><strong>Email:</strong> <a href="mailto:hr@dsstalentbridge.com" className="text-gold-600 font-semibold hover:underline">hr@dsstalentbridge.com</a></li>
                 <li><strong>Bangalore Office:</strong> Outer Ring Road, Tech Corridor, Bangalore, KA, India</li>
                 <li><strong>Nagpur Office:</strong> IT Park, Gayatri Nagar, Nagpur, MH, India</li>
               </ul>

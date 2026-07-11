@@ -23,12 +23,12 @@ export default function PrivacyPage() {
             <h1 className="text-3xl font-extrabold text-navy-800 tracking-tight sm:text-4xl mt-3 mb-8">
               Privacy Policy
             </h1>
-            
+
             <div className="prose prose-slate max-w-none text-slate-600 space-y-6 text-sm sm:text-base leading-relaxed">
               <p>
                 <strong>Last Updated: July 6, 2026</strong>
               </p>
-              
+
               <p>
                 At DSS Talent Bridge, we are committed to protecting the privacy and security of our candidates, clients, and website visitors. This Privacy Policy describes how we collect, use, store, and share your personal information when you use our Human Resource Recruitment and Staffing services or visit our website.
               </p>
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
                 If you have questions about this Privacy Policy, please reach out to our team:
               </p>
               <ul className="list-none pl-0 space-y-1">
-                <li><strong>Email:</strong> <a href="mailto:info@dsstalentbridge.com" className="text-gold-600 font-semibold hover:underline">info@dsstalentbridge.com</a></li>
+                <li><strong>Email:</strong> <a href="mailto:hr@dsstalentbridge.com" className="text-gold-600 font-semibold hover:underline">hr@dsstalentbridge.com</a></li>
                 <li><strong>Bangalore Office:</strong> Outer Ring Road, Tech Corridor, Bangalore, KA, India</li>
                 <li><strong>Nagpur Office:</strong> IT Park, Gayatri Nagar, Nagpur, MH, India</li>
               </ul>

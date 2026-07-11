@@ -155,15 +155,15 @@ export default function ClientContactPage() {
           {/* Communications */}
           <div className="bg-navy-800 rounded-2xl p-8 text-white shadow-lg border border-slate-700/50 space-y-6">
             <h3 className="text-lg font-bold border-b border-white/10 pb-3">Direct Channels</h3>
-            
+
             <div className="flex items-center gap-4">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-gold-400">
                 <Mail className="h-5 w-5" />
               </div>
               <div>
                 <span className="text-xs text-slate-400 block font-medium">Email Address</span>
-                <a href="mailto:info@dsstalentbridge.com" className="text-sm font-semibold text-white hover:text-gold-400 transition-colors">
-                  info@dsstalentbridge.com
+                <a href="mailto:hr@dsstalentbridge.com" className="text-sm font-semibold text-white hover:text-gold-400 transition-colors">
+                  hr@dsstalentbridge.com
                 </a>
               </div>
             </div>
@@ -234,9 +234,8 @@ export default function ClientContactPage() {
                       id="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                        errors.name ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                      }`}
+                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.name ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                        }`}
                       placeholder="Jane Doe"
                       disabled={isSubmitting}
                     />
@@ -254,9 +253,8 @@ export default function ClientContactPage() {
                       id="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                        errors.email ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                      }`}
+                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.email ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                        }`}
                       placeholder="jane@example.com"
                       disabled={isSubmitting}
                     />
@@ -276,9 +274,8 @@ export default function ClientContactPage() {
                       id="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                        errors.phone ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                      }`}
+                      className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.phone ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                        }`}
                       placeholder="+91 98765 43210"
                       disabled={isSubmitting}
                     />
@@ -318,9 +315,8 @@ export default function ClientContactPage() {
                     id="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.subject ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.subject ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
                     placeholder="e.g. Sourcing collaboration query"
                     disabled={isSubmitting}
                   />
@@ -338,9 +334,8 @@ export default function ClientContactPage() {
                     rows={5}
                     value={formData.message}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.message ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.message ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
                     placeholder="Detail your request, issue, or collaboration proposal here..."
                     disabled={isSubmitting}
                   />
