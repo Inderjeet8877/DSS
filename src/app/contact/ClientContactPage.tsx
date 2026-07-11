@@ -175,7 +175,7 @@ export default function ClientContactPage() {
               <div>
                 <span className="text-xs text-slate-400 block font-medium">Phone Support</span>
                 <a href="tel:+919876543210" className="text-sm font-semibold text-white hover:text-gold-400 transition-colors">
-                  +91 98765 43210
+                  +91 6361026230
                 </a>
               </div>
             </div>
@@ -276,7 +276,7 @@ export default function ClientContactPage() {
                       onChange={handleChange}
                       className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.phone ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
                         }`}
-                      placeholder="+91 98765 43210"
+                      placeholder="+91 6361026230"
                       disabled={isSubmitting}
                     />
                     {errors.phone && <p className="mt-1 text-xs text-rose-500">{errors.phone}</p>}

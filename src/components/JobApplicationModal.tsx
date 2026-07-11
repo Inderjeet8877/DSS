@@ -128,7 +128,7 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm animate-fade-in">
       <div className="relative w-full max-w-2xl overflow-hidden rounded-2xl bg-white shadow-2xl border border-slate-100 flex flex-col max-h-[90vh]">
-        
+
         {/* Modal Header */}
         <div className="flex items-center justify-between border-b border-slate-100 bg-navy-800 p-6 text-white">
           <div>
@@ -186,9 +186,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                     id="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.name ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.name ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
                     placeholder="John Doe"
                     disabled={isSubmitting}
                   />
@@ -206,9 +205,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.email ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.email ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
                     placeholder="john@example.com"
                     disabled={isSubmitting}
                   />
@@ -228,10 +226,9 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                     id="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.phone ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
-                    placeholder="+91 98765 43210"
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.phone ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
+                    placeholder="+91 6361026230"
                     disabled={isSubmitting}
                   />
                   {errors.phone && <p className="mt-1 text-xs text-rose-500">{errors.phone}</p>}
@@ -248,9 +245,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                     id="resumeLink"
                     value={formData.resumeLink}
                     onChange={handleChange}
-                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                      errors.resumeLink ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                    }`}
+                    className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.resumeLink ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                      }`}
                     placeholder="https://drive.google.com/.../my-resume"
                     disabled={isSubmitting}
                   />
@@ -269,9 +265,8 @@ export default function JobApplicationModal({ job, isOpen, onClose }: JobApplica
                   rows={4}
                   value={formData.coverLetter}
                   onChange={handleChange}
-                  className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${
-                    errors.coverLetter ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
-                  }`}
+                  className={`w-full rounded-lg border px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold-500/30 ${errors.coverLetter ? "border-rose-400 focus:border-rose-500" : "border-slate-200 focus:border-gold-500"
+                    }`}
                   placeholder="Outline your experience, expertise, and why you fit this role..."
                   disabled={isSubmitting}
                 />
