@@ -213,6 +213,61 @@ export default function Header() {
       {isOpen && (
         <div className="md:hidden animate-fade-in" id="mobile-menu">
           <div className="space-y-1 px-4 pb-4 pt-2 border-t border-slate-100 bg-white shadow-inner">
+            {/* Mobile Search */}
+            <div className="relative mb-3 pt-1">
+              <div className="flex items-center gap-2 bg-slate-50 border border-slate-200/85 rounded-full px-3.5 py-2 w-full shadow-sm">
+                <Search className="h-4 w-4 text-slate-500 shrink-0" />
+                <input
+                  type="text"
+                  placeholder="Search active roles..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  className="bg-transparent text-sm w-full focus:outline-none text-navy-800 font-semibold"
+                />
+                {searchQuery && (
+                  <button
+                    onClick={() => setSearchQuery("")}
+                    className="text-slate-400 hover:text-navy-800 transition-colors"
+                  >
+                    <X className="h-3.5 w-3.5" />
+                  </button>
+                )}
+              </div>
+              {/* Search Suggestions in Mobile */}
+              {searchQuery && (
+                <div className="absolute left-0 top-full mt-1 w-full bg-white rounded-xl shadow-xl border border-slate-200/80 py-3 z-50 animate-fade-in divide-y divide-slate-100 max-h-60 overflow-y-auto">
+                  <div className="px-4 pb-2 text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                    Matching Positions
+                  </div>
+                  {filteredSearchJobs.length > 0 ? (
+                    filteredSearchJobs.map((job) => (
+                      <Link
+                        key={job.id}
+                        href={`/jobs?id=${job.id}`}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setSearchQuery("");
+                        }}
+                        className="flex flex-col gap-1 px-4 py-2 hover:bg-slate-50 transition-colors text-left"
+                      >
+                        <span className="text-xs font-bold text-navy-800">
+                          {job.title}
+                        </span>
+                        <div className="flex items-center justify-between text-[10px] text-slate-500 font-medium">
+                          <span>{job.department}</span>
+                          <span className="text-gold-600 font-semibold">{job.location}</span>
+                        </div>
+                      </Link>
+                    ))
+                  ) : (
+                    <div className="px-4 py-4 text-center text-xs text-slate-400">
+                      No matching jobs found
+                    </div>
+                  )}
+                </div>
+              )}
+            </div>
+
             {navigation.map((item) => {
               const Icon = item.icon;
               return (

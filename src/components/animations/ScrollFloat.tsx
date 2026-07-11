@@ -33,10 +33,18 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
 
   const splitText = useMemo(() => {
     const text = typeof children === 'string' ? children : '';
-    return text.split('').map((char, index) => (
-      <span className="inline-block word" key={index}>
-        {char === ' ' ? '\u00A0' : char}
-      </span>
+    const words = text.split(' ');
+    return words.map((word, wordIndex) => (
+      <React.Fragment key={wordIndex}>
+        <span className="inline-block whitespace-nowrap">
+          {word.split('').map((char, charIndex) => (
+            <span className="inline-block scroll-float-char" key={charIndex}>
+              {char}
+            </span>
+          ))}
+        </span>
+        {wordIndex < words.length - 1 && ' '}
+      </React.Fragment>
     ));
   }, [children]);
 
@@ -46,7 +54,7 @@ const ScrollFloat: React.FC<ScrollFloatProps> = ({
 
     const scroller = scrollContainerRef && scrollContainerRef.current ? scrollContainerRef.current : window;
 
-    const charElements = el.querySelectorAll('.inline-block');
+    const charElements = el.querySelectorAll('.scroll-float-char');
 
     gsap.fromTo(
       charElements,
