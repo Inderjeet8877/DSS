@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Montserrat, Inter } from "next/font/google";
 import "./globals.css";
+import WhatsAppWidget from "@/components/WhatsAppWidget";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -41,7 +42,11 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <WhatsAppWidget />
+      </body>
     </html>
   );
 }
+
