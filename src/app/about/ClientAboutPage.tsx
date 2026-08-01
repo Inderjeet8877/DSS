@@ -6,25 +6,9 @@ import { Compass, Award, Shield, Clock, MapPin, CheckCircle } from "lucide-react
 import ScrollFloat from "@/components/animations/ScrollFloat";
 import TextType from "@/components/animations/TextType";
 
-// Define custom JSX wrapper for Web Component to satisfy TypeScript
-const DotLottieWC = "dotlottie-wc" as any;
+import LazyLottie from "@/components/LazyLottie";
 
 export default function ClientAboutPage() {
-  const [isMounted, setIsMounted] = useState(false);
-
-  useEffect(() => {
-    setIsMounted(true);
-
-    // Dynamically load Lottie Web Component Script on client mount
-    const scriptId = "dotlottie-wc-script";
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js";
-      script.type = "module";
-      document.head.appendChild(script);
-    }
-  }, []);
 
   const expertises = [
     "Technology",
@@ -45,16 +29,12 @@ export default function ClientAboutPage() {
       <section className="relative bg-navy-800 text-white py-16 sm:py-24 overflow-hidden">
         {/* Background Lottie Animation */}
         <div className="absolute inset-0 z-0 opacity-20 flex items-center justify-center pointer-events-none">
-          {isMounted ? (
-            <DotLottieWC
-              src="https://lottie.host/d3e18b91-70b8-4d8d-9bdb-462cc97cfec9/z0aKCSpVT0.lottie"
-              autoplay
-              loop
-              style={{ width: "100%", height: "100%", objectFit: "cover" }}
-            />
-          ) : (
-            <div className="w-full h-full bg-navy-950/20" />
-          )}
+          <LazyLottie
+            src="https://lottie.host/d3e18b91-70b8-4d8d-9bdb-462cc97cfec9/z0aKCSpVT0.lottie"
+            autoplay
+            loop
+            style={{ width: "100%", height: "100%" }}
+          />
         </div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(184,144,71,0.15),transparent)] pointer-events-none z-10" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative text-center z-20">
@@ -172,16 +152,12 @@ export default function ClientAboutPage() {
             {/* Pillar 1 */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:border-gold-500/30 transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-48 h-48 flex items-center justify-center mb-4">
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/167fec2b-55ed-4c18-855c-9156850735f8/11aViRNtWx.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/167fec2b-55ed-4c18-855c-9156850735f8/11aViRNtWx.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
               <h3 className="text-lg font-bold text-navy-800 mb-2">Talent Integration</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -192,16 +168,12 @@ export default function ClientAboutPage() {
             {/* Pillar 2 */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:border-gold-500/30 transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-48 h-48 flex items-center justify-center mb-4">
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/e6ee57ce-4e2b-4333-acd1-4587c9c601ee/w9gbHTjU6v.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/e6ee57ce-4e2b-4333-acd1-4587c9c601ee/w9gbHTjU6v.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
               <h3 className="text-lg font-bold text-navy-800 mb-2">Advanced Screening</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -212,16 +184,12 @@ export default function ClientAboutPage() {
             {/* Pillar 3 */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:border-gold-500/30 transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-48 h-48 flex items-center justify-center mb-4">
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/3f5d36a8-127c-43e5-a2ec-05be0f136151/3xfNCpbOZR.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/3f5d36a8-127c-43e5-a2ec-05be0f136151/3xfNCpbOZR.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
               <h3 className="text-lg font-bold text-navy-800 mb-2">Secure Compliance</h3>
               <p className="text-xs text-slate-600 leading-relaxed">
@@ -232,16 +200,12 @@ export default function ClientAboutPage() {
             {/* Pillar 4 */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-xl hover:border-gold-500/30 transition-all duration-300 transform hover:-translate-y-1">
               <div className="w-48 h-48 flex items-center justify-center mb-4">
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/b2c22d1b-5737-4de2-a8e7-347856928038/kTgdXqKFuL.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/b2c22d1b-5737-4de2-a8e7-347856928038/kTgdXqKFuL.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
               <h3 className="text-lg font-bold text-navy-800 mb-2">Global Operations</h3>
               <p className="text-xs text-slate-600 leading-relaxed">

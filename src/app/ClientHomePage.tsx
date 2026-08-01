@@ -32,12 +32,10 @@ import ScrollFloat from "@/components/animations/ScrollFloat";
 import ScrollReveal from "@/components/animations/ScrollReveal";
 import TextType from "@/components/animations/TextType";
 
-// Define a custom JSX wrapper for the Web Component to satisfy TypeScript
-const DotLottieWC = "dotlottie-wc" as any;
+import LazyLottie from "@/components/LazyLottie";
 
 export default function ClientHomePage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [isMounted, setIsMounted] = useState(false);
 
   const specialties = useMemo(() => [
     "AI & Machine Learning Placements.",
@@ -71,18 +69,6 @@ export default function ClientHomePage() {
   const sloganBgRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-
-    // Dynamically load Lottie Web Component Script on client mount
-    const scriptId = "dotlottie-wc-script";
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement("script");
-      script.id = scriptId;
-      script.src = "https://unpkg.com/@lottiefiles/dotlottie-wc@0.9.14/dist/dotlottie-wc.js";
-      script.type = "module";
-      document.head.appendChild(script);
-    }
-
     gsap.registerPlugin(ScrollTrigger);
 
     // 1. Hero Text Elements Staggered Zoom-out Animation
@@ -260,13 +246,16 @@ export default function ClientHomePage() {
       <section className="relative overflow-hidden bg-slate-50 text-navy-900 py-24 sm:py-32 min-h-[85vh] flex items-center">
         {/* Background Parallax Image with Overlay - Lighter Theme */}
         <div className="absolute inset-0 z-0 overflow-hidden">
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: "url('/hero_manufacturing.png')" }}
-            ref={heroBgRef}
+          <Image
+            src="/hero_manufacturing.png"
+            alt="DSS Talent Bridge Hero Background"
+            fill
+            sizes="100vw"
+            priority
+            className="object-cover object-center"
+            ref={heroBgRef as any}
           />
-          {/* Lighter overlay letting the image hint through, but keeping it light and soft */}
-          <div className="absolute inset-0 bg-slate-50/92 z-10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-slate-50/95 via-slate-50/80 to-transparent z-10" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(184,144,71,0.15),transparent)] z-20 pointer-events-none" />
         </div>
 
@@ -343,16 +332,12 @@ export default function ClientHomePage() {
             {/* Right Graphic/Logo Box */}
             <div className="lg:col-span-5 flex justify-center z-10 w-full" ref={heroGraphicRef}>
               <div className="relative w-full h-[320px] sm:h-[450px] max-w-[500px] flex items-center justify-center">
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/644cd00a-3130-4ab1-aae6-6c87d1f1e5b5/j839HorRzH.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/644cd00a-3130-4ab1-aae6-6c87d1f1e5b5/j839HorRzH.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
             </div>
           </div>
@@ -447,16 +432,12 @@ export default function ClientHomePage() {
             <div className="lg:col-span-5 flex justify-center w-full">
               <div className="relative w-full h-[320px] sm:h-[400px] max-w-[460px] rounded-3xl bg-gradient-to-tr from-navy-900 to-navy-700/80 p-6 shadow-xl border border-slate-700/50 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-navy-950/20 z-10 pointer-events-none" />
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/855fb9c9-3416-492b-a997-4593a6436b98/y10m8zau5l.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/855fb9c9-3416-492b-a997-4593a6436b98/y10m8zau5l.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
             </div>
           </div>
@@ -469,16 +450,12 @@ export default function ClientHomePage() {
             <div className="lg:col-span-5 order-2 lg:order-1 flex justify-center w-full">
               <div className="relative w-full h-[320px] sm:h-[400px] max-w-[460px] rounded-3xl bg-gradient-to-tr from-navy-900 to-navy-700/80 p-6 shadow-xl border border-slate-700/50 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-navy-950/20 z-10 pointer-events-none" />
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/a2184b50-4a28-4032-9280-4e95f8cbe905/vC2hn36Arg.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/a2184b50-4a28-4032-9280-4e95f8cbe905/vC2hn36Arg.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
             </div>
 
@@ -576,16 +553,12 @@ export default function ClientHomePage() {
             <div className="lg:col-span-5 flex justify-center w-full">
               <div className="relative w-full h-[320px] sm:h-[400px] max-w-[460px] rounded-3xl bg-gradient-to-tr from-navy-900 to-navy-700/80 p-6 shadow-xl border border-slate-700/50 flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-navy-950/20 z-10 pointer-events-none" />
-                {isMounted ? (
-                  <DotLottieWC
-                    src="https://lottie.host/f15d366d-6095-4d36-8bd3-1e5a59893557/bKnL9WnoZy.lottie"
-                    autoplay
-                    loop
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                ) : (
-                  <div className="w-full h-full bg-navy-950/10" />
-                )}
+                <LazyLottie
+                  src="https://lottie.host/f15d366d-6095-4d36-8bd3-1e5a59893557/bKnL9WnoZy.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
               </div>
             </div>
           </div>
@@ -693,51 +666,41 @@ export default function ClientHomePage() {
 
           {/* Slogan Animations Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 justify-center items-center w-full max-w-4xl mt-10">
-            {isMounted ? (
-              <>
-                <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
-                  <div className="w-[180px] h-[180px]">
-                    <DotLottieWC
-                      src="https://lottie.host/b8ee9e92-4486-49e0-bb0e-0c8e5a9c2dfc/bZADDsJGUq.lottie"
-                      autoplay
-                      loop
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                  <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Innovative Solutions</span>
-                </div>
+            <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
+              <div className="w-[180px] h-[180px]">
+                <LazyLottie
+                  src="https://lottie.host/b8ee9e92-4486-49e0-bb0e-0c8e5a9c2dfc/bZADDsJGUq.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Innovative Solutions</span>
+            </div>
 
-                <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
-                  <div className="w-[180px] h-[180px]">
-                    <DotLottieWC
-                      src="https://lottie.host/a7fa4a4f-abc5-4c3e-b646-4b1c4bbae31f/mRqZLQZGDM.lottie"
-                      autoplay
-                      loop
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                  <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Exceptional Talent</span>
-                </div>
+            <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
+              <div className="w-[180px] h-[180px]">
+                <LazyLottie
+                  src="https://lottie.host/a7fa4a4f-abc5-4c3e-b646-4b1c4bbae31f/mRqZLQZGDM.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Exceptional Talent</span>
+            </div>
 
-                <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
-                  <div className="w-[180px] h-[180px]">
-                    <DotLottieWC
-                      src="https://lottie.host/959fcaa7-1746-4121-b133-57ec740b141f/by86ozfyle.lottie"
-                      autoplay
-                      loop
-                      style={{ width: "100%", height: "100%" }}
-                    />
-                  </div>
-                  <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Global Network</span>
-                </div>
-              </>
-            ) : (
-              <>
-                <div className="h-[240px] rounded-2xl bg-navy-950/20" />
-                <div className="h-[240px] rounded-2xl bg-navy-950/20" />
-                <div className="h-[240px] rounded-2xl bg-navy-950/20" />
-              </>
-            )}
+            <div className="flex flex-col items-center justify-center bg-navy-900/60 backdrop-blur-lg rounded-2xl p-6 border border-white/15 hover:border-gold-500/50 transition-all duration-300 transform hover:scale-[1.03] shadow-lg">
+              <div className="w-[180px] h-[180px]">
+                <LazyLottie
+                  src="https://lottie.host/959fcaa7-1746-4121-b133-57ec740b141f/by86ozfyle.lottie"
+                  autoplay
+                  loop
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-gold-400 mt-4 drop-shadow-md">Global Network</span>
+            </div>
           </div>
         </div>
       </section>
