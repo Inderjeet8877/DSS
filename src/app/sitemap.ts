@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
 import { blogPosts } from "@/lib/data/blogs";
+import { mockJobs } from "@/lib/data/jobs";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://dsstalentbridge.com";
@@ -20,5 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...routes, ...blogRoutes];
+  // Dynamic job routes (by query param)
+  const jobRoutes = mockJobs.map((job) => ({
+    url: `${baseUrl}/jobs?id=${job.id}`,
+    lastModified: new Date(job.postedDate),
+    changeFrequency: "weekly" as const,
+    priority: 0.7,
+  }));
+
+  return [...routes, ...blogRoutes, ...jobRoutes];
 }

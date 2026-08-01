@@ -20,13 +20,20 @@ export async function generateMetadata(): Promise<Metadata> {
 
 import Breadcrumbs from "@/components/Breadcrumbs";
 
-export default function JobsPage() {
+interface JobsPageProps {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}
+
+export default async function JobsPage({ searchParams }: JobsPageProps) {
+  const resolvedSearchParams = await searchParams;
+  const jobId = typeof resolvedSearchParams.id === "string" ? resolvedSearchParams.id : undefined;
+
   return (
     <>
       <Header />
       <Breadcrumbs />
       <main className="flex-grow bg-slate-50 py-12">
-        <ClientJobsPage />
+        <ClientJobsPage initialJobId={jobId} />
       </main>
       <Footer />
     </>

@@ -52,8 +52,37 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://dsstalentbridge.com/blog/${post.slug}`
+    },
+    "headline": post.title,
+    "description": post.excerpt,
+    "image": "https://dsstalentbridge.com/logo.jpeg",
+    "datePublished": post.date,
+    "author": {
+      "@type": "Person",
+      "name": post.author
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "DSS Talent Bridge",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://dsstalentbridge.com/logo.jpeg"
+      }
+    }
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+      />
       <Header />
       <Breadcrumbs />
       <main className="flex-grow bg-slate-50 py-12">

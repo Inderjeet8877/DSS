@@ -7,8 +7,14 @@ import JobApplicationModal from "@/components/JobApplicationModal";
 import ScrollFloat from "@/components/animations/ScrollFloat";
 import TextType from "@/components/animations/TextType";
 
-export default function ClientJobsPage() {
-  const [searchTerm, setSearchTerm] = useState("");
+export default function ClientJobsPage({ initialJobId }: { initialJobId?: string }) {
+  // If initialJobId is provided, pre-populate search state for SEO server-render
+  const initialJob = useMemo(() => {
+    if (!initialJobId) return null;
+    return mockJobs.find((j) => j.id === initialJobId) || null;
+  }, [initialJobId]);
+
+  const [searchTerm, setSearchTerm] = useState(initialJob ? initialJob.title : "");
   const [selectedDept, setSelectedDept] = useState<string>("All");
   const [selectedLoc, setSelectedLoc] = useState<string>("All");
   const [activeJob, setActiveJob] = useState<Job | null>(null);
@@ -74,7 +80,7 @@ export default function ClientJobsPage() {
       "@graph": filteredJobs.map((job) => ({
         "@type": "JobPosting",
         "title": job.title,
-        "description": job.description,
+        "description": `<p>${job.description}</p><h3>Key Requirements:</h3><ul>${job.requirements.map((req) => `<li>${req}</li>`).join("")}</ul><h3>Tech Stack:</h3><p>${job.techStack.join(", ")}</p>`,
         "datePosted": job.postedDate,
         "validThrough": "2026-12-31T23:59:59Z",
         "employmentType": job.type === "Full-Time" ? "FULL_TIME" : job.type === "Contract" ? "CONTRACTOR" : "PART_TIME",

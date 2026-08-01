@@ -36,8 +36,46 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://dsstalentbridge.com/#organization",
+        "name": "DSS Talent Bridge",
+        "url": "https://dsstalentbridge.com",
+        "logo": "https://dsstalentbridge.com/logo.jpeg",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+91 6361026230",
+          "contactType": "customer service",
+          "email": "hr@dsstalentbridge.com",
+          "areaServed": "IN",
+          "availableLanguage": ["en", "hi"]
+        },
+        "sameAs": [
+          "https://linkedin.com"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://dsstalentbridge.com/#website",
+        "url": "https://dsstalentbridge.com",
+        "name": "DSS Talent Bridge",
+        "description": "Technology & BFSI Recruitment & Staffing Firm connecting top-tier talent in AI, Cloud, BFSI, and SAP with leading organizations.",
+        "publisher": {
+          "@id": "https://dsstalentbridge.com/#organization"
+        }
+      }
+    ]
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
       <Header />
       <main className="flex-grow">
         <ClientHomePage />
